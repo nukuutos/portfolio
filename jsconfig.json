@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "es2021",
+    "jsx": "react",
+    "moduleResolution": "Node"
+  },
+  "include": ["./src/**/*"]
+}
