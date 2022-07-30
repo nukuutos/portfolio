@@ -1,0 +1,95 @@
+@use '../../sass/abstracts/colors' as *;
+
+.section {
+  position: relative;
+  width: 116.2rem;
+  height: 81.4rem;
+  background: $color-blue;
+  padding-top: 6.4rem;
+  margin-top: 6rem;
+  box-shadow: 0 5px 15px rgba($color-black, 0.75);
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-left: 4.8rem;
+}
+
+.about {
+  position: absolute;
+  left: 15rem;
+  top: 55%;
+
+  display: flex;
+  font-size: 2rem;
+  line-height: 3.6rem;
+  width: 46rem;
+
+  transform: translateY(-100%);
+
+  &::before {
+    content: '';
+    width: 3.6rem;
+    margin-right: 2rem;
+    background: $color-gold;
+  }
+}
+
+.motto {
+  position: absolute;
+  color: $color-gold;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.gold-broken-curve,
+.red-broken-curve,
+.white-broken-curve {
+  position: absolute;
+  transform: rotate(58deg);
+}
+
+.gold-broken-curve {
+  bottom: 6.4rem;
+  right: 13.2rem;
+}
+
+.red-broken-curve {
+  top: 19.2rem;
+  left: 22.5rem;
+}
+
+.white-broken-curve {
+  top: 10.4rem;
+  right: 34.7rem;
+  transform: rotate(140deg);
+}
+
+.gold-rhombs-set {
+  position: absolute;
+  bottom: 3.6rem;
+  right: -7.2rem;
+  transform: translateX(100%) rotate(-20deg);
+
+  & > * {
+    background: $color-gold;
+  }
+}
+
+.red-rhombs-set {
+  position: absolute;
+  top: 0rem;
+  right: -13.2rem;
+  transform: translate(100%, -50%) rotate(-20deg);
+
+  & > * {
+    background: $color-red;
+  }
+}

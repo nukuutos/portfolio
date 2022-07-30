@@ -1,32 +1,30 @@
-import React from 'react';
+import BrokenCurve from './broken-curve/broken-curve';
+import Curve from './curve/curve';
+import styles from './introduction-section.module.scss';
+import Profile from './profile/profile';
+import RhombsSet from './rhombs-set/rhombs-set';
 
 const IntroductionSection = () => (
-  <section className="section section-introduction">
-    <h1 className="header header--primary">MERN Stack Developer</h1>
-    <p className="section-introduction__about-yourself">
+  <section className={styles.section}>
+    <h1 className={styles.header}>MERN Stack Developer</h1>
+
+    <p className={styles.about}>
       I’m full stack developer for 4 years. Currently searching for Software Developer Job. One
       semester away from graduating as a computer security specialist. Like to play CTFs.
     </p>
 
-    <div className="curve-wrapper">
-      <svg />
-    </div>
-    <div className="section-introduction__set-of-rhombs" />
-    <div className="section-introduction__set-of-rhombs" />
-    <div className="broken-curve" />
-    <div className="broken-curve" />
-    <div className="broken-curve" />
+    <Curve />
 
-    <div className="vertical-group">
-      <div className="profile section-introduction__profile">
-        <span className="profile__name">Nikita</span>
-        <span className="profile__mern">MERN</span>
-        <span className="profile__avatar">:)</span>
-      </div>
-      <div className="section-introduction__emphasizing" />
-    </div>
+    <RhombsSet className={styles['gold-rhombs-set']} />
+    <RhombsSet className={styles['red-rhombs-set']} />
 
-    <span className="section-introduction__motto">Performance. Readability. Tested.</span>
+    <BrokenCurve color="gold" className={styles['gold-broken-curve']} />
+    <BrokenCurve color="red" className={styles['red-broken-curve']} />
+    <BrokenCurve color="white" className={styles['white-broken-curve']} />
+
+    <Profile />
+
+    <span className={styles.motto}>Performance. Readability. Tested.</span>
   </section>
 );
 

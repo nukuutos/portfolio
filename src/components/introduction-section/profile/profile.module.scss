@@ -1,0 +1,60 @@
+@use '../../../sass/abstracts/colors' as *;
+
+.profile {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  position: relative;
+  width: 33.2rem;
+  height: 32.4rem;
+  background: $color-purple-dark;
+}
+
+.emoji {
+  position: absolute;
+  display: inline-block;
+  font-size: 12rem;
+  font-weight: 700;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.name,
+.mern {
+  position: absolute;
+  left: 0;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.name {
+  top: 0;
+  transform: translateY(calc(-100% - 0.8rem));
+}
+
+.mern {
+  bottom: 0;
+  transform: translate(calc(-68% - 0.8rem), -2.9rem) rotate(-90deg);
+}
+
+.emphasizing {
+  width: 100%;
+  height: 2.8rem;
+  background: $color-red;
+  margin-top: 2.4rem;
+}
+
+.blue-broken-curve {
+  position: absolute;
+  top: 50%;
+  right: -5.8rem;
+  transform: translate(60%, -50%) rotate(-90deg);
+}

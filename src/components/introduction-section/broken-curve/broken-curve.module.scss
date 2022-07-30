@@ -1,0 +1,18 @@
+@use '../../../sass/abstracts/colors' as *;
+
+.curve {
+  fill: transparent;
+  stroke: $color-white;
+}
+
+.gold {
+  stroke: $color-gold;
+}
+
+.red {
+  stroke: $color-red;
+}
+
+.blue {
+  stroke: $color-blue;
+}

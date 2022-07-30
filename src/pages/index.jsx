@@ -1,9 +1,5 @@
-import IntroductionSection from '../components/introduction-section/introduction-section';
+import Portfolio from '../components/portfolio';
 
-const Index = () => (
-  <main>
-    <IntroductionSection />
-  </main>
-);
+const Index = () => <Portfolio />;
 
 export default Index;

@@ -1,0 +1,15 @@
+@use '../../../sass/abstracts/colors' as *;
+
+.set {
+  display: grid;
+  grid-template-columns: repeat(6, min-content);
+  grid-template-rows: repeat(6, min-content);
+  column-gap: 0.76rem;
+  row-gap: 0.76rem;
+
+  & > * {
+    width: 0.4rem;
+    height: 0.4rem;
+    transform: rotate(65deg);
+  }
+}
