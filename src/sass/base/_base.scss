@@ -19,12 +19,13 @@ body {
   position: relative;
   box-sizing: border-box;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1;
   letter-spacing: 0.1px;
   text-rendering: optimizeLegibility;
+  color: $color-white;
 }
 
 li {
