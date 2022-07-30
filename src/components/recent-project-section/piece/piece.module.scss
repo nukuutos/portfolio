@@ -1,0 +1,8 @@
+@use '@styles/colors' as *;
+
+.piece {
+  position: absolute;
+  fill: $color-gray;
+  width: 20rem;
+  height: 20rem;
+}

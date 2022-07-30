@@ -1,0 +1,7 @@
+@use '@styles/colors' as *;
+
+.chevron {
+  stroke: $color-purple-gray;
+  fill: transparent;
+  width: 1.4rem;
+}
