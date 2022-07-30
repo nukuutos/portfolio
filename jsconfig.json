@@ -1,9 +1,13 @@
 {
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "module": "ES6",
     "target": "es2021",
     "jsx": "react",
-    "moduleResolution": "Node"
-  },
-  "include": ["./src/**/*"]
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@styles/*": ["./src/sass/abstracts/*"]
+    }
+  }
 }
