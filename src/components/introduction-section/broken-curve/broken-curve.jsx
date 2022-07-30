@@ -1,6 +1,6 @@
 import useBaseClassName from './use-base-class-name';
 
-const BrokenCurve = ({ color, className }) => {
+const BrokenCurve = ({ color, className = '' }) => {
   const baseClassName = useBaseClassName(color);
 
   return (

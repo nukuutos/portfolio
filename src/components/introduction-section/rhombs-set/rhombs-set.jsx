@@ -1,6 +1,6 @@
 import styles from './rhombs-set.module.scss';
 
-const RhombsSet = ({ className }) => (
+const RhombsSet = ({ className = '' }) => (
   <div className={`${styles.set} ${className}`}>
     <div />
     <div />
