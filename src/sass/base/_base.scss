@@ -1,6 +1,6 @@
-@use "fonts";
-@use "../abstracts/colors" as *;
-@use "../abstracts/mixins" as *;
+@use 'fonts';
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
 
 *,
 *::after,
@@ -55,6 +55,7 @@ button {
 svg {
   width: unset;
   fill: inherit;
+  stroke: inherit;
 }
 
 textarea,
