@@ -1,0 +1,32 @@
+@use '@styles/colors' as *;
+
+.input {
+  border: none;
+  border-bottom: 2px solid $color-white;
+  outline: none;
+  background: none;
+  padding: 0.8rem 0 0.4rem;
+  color: $color-white;
+  letter-spacing: 0.1px;
+  margin-bottom: 3.2rem;
+
+  &::placeholder {
+    color: $color-blue-light;
+  }
+
+  &:focus {
+    border-color: $color-gold;
+
+    & ~ label {
+      color: $color-gold;
+    }
+  }
+}
+
+.error {
+  border-color: $color-red;
+
+  &:focus {
+    border-color: $color-red;
+  }
+}

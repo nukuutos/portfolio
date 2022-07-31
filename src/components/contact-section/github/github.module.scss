@@ -1,0 +1,13 @@
+@use '@styles/colors' as *;
+
+.github {
+  fill: $color-blue-light;
+  height: 2.4rem;
+  cursor: pointer;
+  transition: 0.2s fill, 0.2s transform;
+
+  &:hover {
+    fill: $color-github;
+    transform: scale(1.2);
+  }
+}

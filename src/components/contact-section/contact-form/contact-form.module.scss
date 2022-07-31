@@ -1,0 +1,22 @@
+@use '@styles/colors' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.button {
+  padding: 1.2rem 0;
+  border: 2px solid rgba($color-gold, 0.9);
+  color: $color-gold;
+  font-size: 2rem;
+  transition: 0.2s background, 0.2s color;
+
+  &:hover {
+    background: rgba($color-gold, 0.9);
+    color: $color-white;
+  }
+}

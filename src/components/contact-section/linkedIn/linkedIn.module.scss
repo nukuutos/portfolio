@@ -1,0 +1,14 @@
+@use '@styles/colors' as *;
+
+.linkedIn {
+  fill: $color-blue-light;
+  height: 2rem;
+  margin-right: 2.4rem;
+  cursor: pointer;
+  transition: 0.2s fill, 0.2s transform;
+
+  &:hover {
+    fill: $color-linkedIn;
+    transform: scale(1.2);
+  }
+}

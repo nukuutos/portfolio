@@ -1,0 +1,51 @@
+@use '@styles/colors' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 18.6rem;
+}
+
+.heading {
+  color: $color-blue-gray;
+  margin-bottom: 7.2rem;
+}
+
+.form-window {
+  width: 78.6rem;
+  padding: 4.4rem 0 1.2rem;
+  background: $color-blue;
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2.8rem 0 2rem;
+}
+
+.email {
+  font-weight: 700;
+  color: $color-gold;
+}
+
+.group {
+  display: flex;
+}
+
+.icon {
+  color: $color-blue-light;
+  height: 2.4rem;
+}
