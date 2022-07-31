@@ -54,6 +54,9 @@
 .white-broken-curve {
   position: absolute;
   transform: rotate(58deg);
+  width: 5.9rem;
+  height: 1.6rem;
+  stroke-width: 2px;
 }
 
 .gold-broken-curve {
@@ -72,8 +75,20 @@
   transform: rotate(140deg);
 }
 
-.gold-rhombs-set {
+.gold-rhombs-set,
+.red-rhombs-set {
   position: absolute;
+  column-gap: 0.76rem;
+  row-gap: 0.76rem;
+
+  & > * {
+    width: 0.4rem;
+    height: 0.4rem;
+    transform: rotate(65deg);
+  }
+}
+
+.gold-rhombs-set {
   bottom: 3.6rem;
   right: -7.2rem;
   transform: translateX(100%) rotate(-20deg);
@@ -84,7 +99,6 @@
 }
 
 .red-rhombs-set {
-  position: absolute;
   top: 0rem;
   right: -13.2rem;
   transform: translate(100%, -50%) rotate(-20deg);

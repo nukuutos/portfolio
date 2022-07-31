@@ -2,6 +2,9 @@ import styles from './contact-section.module.scss';
 import ContactForm from './contact-form/contact-form';
 import Github from './github/github';
 import Indeed from './linkedIn/linkedIn';
+import BrokenCurve from '../shared/broken-curve/broken-curve';
+import Piece from '../shared/piece/piece';
+import RhombsSet from '../shared/rhombs-set/rhombs-set';
 
 const ContactSection = () => (
   <section className={styles.section}>
@@ -16,8 +19,10 @@ const ContactSection = () => (
           <Github />
         </div>
       </div>
+      <BrokenCurve className={styles.curve} color="red" />
+      <Piece className={styles.piece} />
+      <RhombsSet className={styles.rhombs} />
       {/* rhombs */}
-      {/* broken-curve */}
       {/* piece */}
     </div>
   </section>

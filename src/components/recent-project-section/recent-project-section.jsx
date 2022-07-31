@@ -1,6 +1,6 @@
 import React from 'react';
 import Chevron from './chevron/chevron';
-import Piece from './piece/piece';
+import Piece from '../shared/piece/piece';
 
 import styles from './recent-project-section.module.scss';
 

@@ -1,4 +1,4 @@
-import BrokenCurve from '../broken-curve/broken-curve';
+import BrokenCurve from '../../shared/broken-curve/broken-curve';
 import styles from './profile.module.scss';
 
 const Profile = () => (

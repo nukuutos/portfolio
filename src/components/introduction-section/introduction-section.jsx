@@ -1,8 +1,8 @@
-import BrokenCurve from './broken-curve/broken-curve';
+import BrokenCurve from '../shared/broken-curve/broken-curve';
 import Curve from './curve/curve';
 import styles from './introduction-section.module.scss';
 import Profile from './profile/profile';
-import RhombsSet from './rhombs-set/rhombs-set';
+import RhombsSet from '../shared/rhombs-set/rhombs-set';
 
 const IntroductionSection = () => (
   <section className={styles.section}>
