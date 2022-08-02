@@ -1,0 +1,43 @@
+@use '@styles/colors' as *;
+
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__curve {
+    stroke-width: 3px;
+
+    &--top {
+      width: 4.2rem;
+      height: 0.8rem;
+      transform: scale(1.3) rotate(180deg);
+    }
+
+    &--middle {
+      width: 7.9rem;
+      height: 1.6rem;
+      stroke-width: 2px;
+      transform: scale(1.2) rotate(180deg);
+
+      margin: 1.2rem 0 0.8rem;
+    }
+
+    &--bottom {
+      width: 5.7rem;
+      height: 1.2rem;
+
+      &:first-of-type {
+        transform: rotate(180deg) translateX(-0.2rem);
+      }
+
+      &:last-of-type {
+        transform: rotate(180deg) translateX(0.2rem);
+      }
+    }
+  }
+
+  &__basement {
+    display: flex;
+  }
+}

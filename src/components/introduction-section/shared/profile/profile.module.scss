@@ -1,4 +1,5 @@
 @use '@styles/colors' as *;
+@use '@styles/mixins' as *;
 
 .profile {
   position: absolute;
@@ -8,6 +9,11 @@
 
   display: flex;
   flex-direction: column;
+
+  @include respond(tab-land) {
+    position: static;
+    transform: none;
+  }
 }
 
 .avatar {
@@ -15,6 +21,11 @@
   width: 33.2rem;
   height: 32.4rem;
   background: $color-purple-dark;
+
+  @include respond(tab-land) {
+    width: 22rem;
+    height: 21.5rem;
+  }
 }
 
 .emoji {
@@ -25,6 +36,10 @@
   top: 50%;
   left: 52%;
   transform: translate(-50%, -50%) rotate(90deg);
+
+  @include respond(tab-land) {
+    font-size: 10rem;
+  }
 }
 
 .name,
@@ -33,6 +48,10 @@
   left: 0;
   font-size: 3.2rem;
   font-weight: 700;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .name {
@@ -50,6 +69,10 @@
   height: 2.8rem;
   background: $color-red;
   margin-top: 2.4rem;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .blue-broken-curve {

@@ -16,6 +16,10 @@ const useBaseClassName = (color) => {
       className += ` ${styles.blue}`;
       break;
 
+    case 'blue-light':
+      className += ` ${styles['blue-light']}`;
+      break;
+
     default:
       break;
   }

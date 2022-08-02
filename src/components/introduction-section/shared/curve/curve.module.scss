@@ -1,0 +1,14 @@
+@use '@styles/mixins' as *;
+@use '@styles/colors' as *;
+
+.wrapper {
+  position: relative;
+  transform: translateY(10rem);
+}
+
+.svg {
+  position: absolute;
+  fill: transparent;
+  stroke: $color-white;
+  stroke-width: 4px;
+}
