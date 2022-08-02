@@ -10,16 +10,12 @@
   height: 3.2rem;
 
   @include respond(tab-port) {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
     width: 22.4rem;
     height: 14.2rem;
     margin-left: 0rem;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-2.8rem);
+    transform: translateY(-1.2rem);
   }
 }
 
