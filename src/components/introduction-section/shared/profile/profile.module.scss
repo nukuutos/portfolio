@@ -11,8 +11,16 @@
   flex-direction: column;
 
   @include respond(tab-land) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
     position: static;
     transform: none;
+  }
+
+  @include respond(tab-port) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
   }
 }
 
@@ -83,4 +91,8 @@
   width: 5.9rem;
   height: 1.6rem;
   stroke-width: 2px;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
