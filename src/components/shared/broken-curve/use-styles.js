@@ -1,6 +1,6 @@
 import styles from './broken-curve.module.scss';
 
-const useBaseClassName = (color) => {
+const useStyles = (color) => {
   let className = styles.curve;
 
   switch (color) {
@@ -27,4 +27,4 @@ const useBaseClassName = (color) => {
   return className;
 };
 
-export default useBaseClassName;
+export default useStyles;
