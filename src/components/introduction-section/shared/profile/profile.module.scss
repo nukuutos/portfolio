@@ -2,26 +2,8 @@
 @use '@styles/mixins' as *;
 
 .profile {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-
   display: flex;
   flex-direction: column;
-
-  @include respond(tab-land) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    position: static;
-    transform: none;
-  }
-
-  @include respond(tab-port) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
 }
 
 .avatar {

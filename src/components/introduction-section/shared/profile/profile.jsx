@@ -1,8 +1,8 @@
 import BrokenCurve from '../../../shared/broken-curve/broken-curve';
 import styles from './profile.module.scss';
 
-const Profile = () => (
-  <div className={styles.profile}>
+const Profile = ({ className = '' }) => (
+  <div className={`${className} ${styles.profile}`}>
     <div className={styles.avatar}>
       <span className={styles.name}>Nikita</span>
       <span className={styles.mern}>MERN</span>

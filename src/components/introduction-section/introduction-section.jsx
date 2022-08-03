@@ -1,10 +1,10 @@
 import IntroductionSectionDesktop from './introduction-section-desktop';
-import IntroductionSectionTablet from './introduction-section-tablet';
+import IntroductionSectionMobile from './introduction-section-mobile';
 
 const IntroductionSection = ({ isDesktop }) => (
   <>
     {isDesktop && <IntroductionSectionDesktop />}
-    {!isDesktop && <IntroductionSectionTablet />}
+    {!isDesktop && <IntroductionSectionMobile />}
   </>
 );
 

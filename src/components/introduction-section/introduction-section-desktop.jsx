@@ -15,7 +15,7 @@ const IntroductionSectionDesktop = () => (
         semester away from graduating as a computer security specialist. Like to play CTFs.
       </p>
 
-      <Curve />
+      <Curve className={styles.curve} />
 
       <RhombsSet className={styles['gold-rhombs-set']} />
       <RhombsSet className={styles['red-rhombs-set']} />
@@ -24,11 +24,11 @@ const IntroductionSectionDesktop = () => (
       <BrokenCurve color="red" className={styles['red-broken-curve']} />
       <BrokenCurve color="white" className={styles['white-broken-curve']} />
 
-      <Profile />
+      <Profile className={styles.profile} />
 
       <span className={styles.motto}>Performance. Readability. Tested.</span>
     </div>
-    {/* for responsiveness on desktop */}
+    {/* for responsiveness */}
     <div className={styles['empty-block']} />
   </section>
 );

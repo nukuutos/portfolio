@@ -4,7 +4,7 @@ import styles from './introduction-section.module.scss';
 import Pyramid from './shared/pyramid/pyramid';
 import LittleCurve from './shared/little-curve/little-curve';
 
-const IntroductionSectionTablet = () => (
+const IntroductionSectionMobile = () => (
   <section className={styles.content}>
     <h1 className={styles.header}>MERN Stack Developer</h1>
     <p className={styles.about}>
@@ -14,14 +14,15 @@ const IntroductionSectionTablet = () => (
 
     <span className={styles.motto}>Performance. Readability. Tested.</span>
 
-    <LittleCurve />
+    <LittleCurve className={styles['little-curve']} />
     <Pyramid className={styles.pyramid} />
-    <Profile />
+    <Profile className={styles.profile} />
     <span className={styles.name}>
-      <span>Nikita&nbsp;</span>
+      <span>Nikita</span>
+      &nbsp;
       <span>Voloshin</span>
     </span>
   </section>
 );
 
-export default IntroductionSectionTablet;
+export default IntroductionSectionMobile;

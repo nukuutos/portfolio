@@ -9,12 +9,6 @@
   width: 24.8rem;
 }
 
-// .left {
-//   display: flex;
-//   flex-direction: column;
-//   margin-right: 10.4rem;
-// }
-
 .column {
   display: flex;
   flex-direction: column;
@@ -31,16 +25,11 @@
   box-shadow: 0 5px 15px rgba($color-black, 0.75);
 
   @include respond(tab-land) {
-    // display: flex;
-    // justify-content: center;
-
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, max-content));
     grid-auto-rows: minmax(min-content, max-content);
     justify-content: center;
     column-gap: 10.4rem;
-    // column-gap: ;
-
     width: 100%;
     height: unset;
     padding-bottom: 6.8rem;
@@ -50,7 +39,6 @@
   @include respond(tab-port) {
     column-gap: 2rem;
     padding-bottom: 1.2rem;
-    // grid-template-columns: minmax(min-content, max-content) min-content;
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -150,6 +138,26 @@
   }
 }
 
+.profile {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  @include respond(tab-land) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    position: static;
+    transform: none;
+  }
+
+  @include respond(tab-port) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
 .motto {
   position: absolute;
   color: $color-gold;
@@ -178,9 +186,31 @@
   }
 }
 
+.curve {
+  transform: translateY(10rem);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.little-curve {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: flex-end;
+  margin-left: 0.8rem;
+
+  @include respond(tab-port) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin-left: 0rem;
+    transform: translateY(-1.2rem);
+  }
+
+  @include respond(phone) {
+    justify-self: center;
+  }
 }
 
 .gold-broken-curve,
