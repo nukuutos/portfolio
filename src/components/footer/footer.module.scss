@@ -1,4 +1,5 @@
 @use '@styles/colors' as *;
+@use '@styles/mixins' as *;
 
 .footer {
   position: absolute;
@@ -7,4 +8,36 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  @include respond(phone) {
+    position: static;
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    height: unset;
+  }
+}
+
+.email {
+  font-weight: 700;
+  color: $color-gold;
+
+  @include respond(phone) {
+    font-size: 2rem;
+    color: $color-purple;
+  }
+}
+
+.group {
+  display: flex;
+  margin-top: 3.2rem;
+}
+
+.icon {
+  color: $color-blue-light;
+  height: 2.8rem;
 }

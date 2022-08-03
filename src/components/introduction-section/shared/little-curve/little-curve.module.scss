@@ -17,6 +17,12 @@
     margin-left: 0rem;
     transform: translateY(-1.2rem);
   }
+
+  @include respond(phone) {
+    justify-self: center;
+    width: 8.4rem;
+    height: 5rem;
+  }
 }
 
 .little-curve {
@@ -25,5 +31,9 @@
 
   @include respond(tab-port) {
     stroke-width: 1px;
+  }
+
+  @include respond(phone) {
+    stroke-width: 2.5px;
   }
 }

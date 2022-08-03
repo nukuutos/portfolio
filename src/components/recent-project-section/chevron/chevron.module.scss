@@ -1,7 +1,12 @@
 @use '@styles/colors' as *;
+@use '@styles/mixins' as *;
 
 .chevron {
   stroke: $color-purple-gray;
   fill: transparent;
   width: 1.4rem;
+
+  @include respond(phone) {
+    width: 1.2rem;
+  }
 }

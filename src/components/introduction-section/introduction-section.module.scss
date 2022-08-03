@@ -53,6 +53,11 @@
     // grid-template-columns: minmax(min-content, max-content) min-content;
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @include respond(phone) {
+    padding-top: 2.4rem;
+    box-shadow: 0 2px 8px rgba($color-black, 0.5);
+  }
 }
 
 .header {
@@ -75,6 +80,10 @@
 
     margin-left: 0;
     margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.8rem;
   }
 }
 
@@ -125,6 +134,18 @@
       margin-top: 3.2rem;
       margin-right: 0;
       height: 1.2rem;
+    }
+  }
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    width: 33rem;
+    margin-top: 2.4rem;
+    margin-bottom: 3.2rem;
+
+    &::before {
+      display: none;
     }
   }
 }
@@ -233,6 +254,10 @@
     grid-row: 5 / 6;
     margin-bottom: 5.6rem;
   }
+
+  @include respond(phone) {
+    margin-bottom: 4rem;
+  }
 }
 
 .name {
@@ -256,6 +281,17 @@
     & > *:last-of-type {
       display: block;
       margin-top: 1.6rem;
+    }
+  }
+
+  @include respond(phone) {
+    align-self: flex-start;
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+    transform: none;
+
+    & > *:last-of-type {
+      margin-top: 1.2rem;
     }
   }
 }

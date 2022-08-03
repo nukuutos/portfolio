@@ -13,12 +13,24 @@
     padding-right: 5.2rem;
     padding-left: 5.2rem;
   }
+
+  @include respond(phone) {
+    // padding-right: 3.2rem;
+    // padding-left: 3.2rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
 }
 
 .heading {
   color: $color-blue-gray;
   margin-bottom: 7.2rem;
   align-self: center;
+
+  @include respond(phone) {
+    margin-bottom: 4.4rem;
+  }
 }
 
 .form-window {
@@ -31,11 +43,21 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  @include respond(phone) {
+    padding-top: 2.8rem;
+    border-radius: 0;
+  }
 }
 
 .form-heading {
   font-size: 3.2rem;
   font-weight: 700;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+  }
 }
 
 .footer {

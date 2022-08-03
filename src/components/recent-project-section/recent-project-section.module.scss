@@ -8,6 +8,10 @@
   @include respond(tab-land) {
     padding-bottom: 10rem;
   }
+
+  @include respond(phone) {
+    padding-bottom: 6rem;
+  }
 }
 
 .recent {
@@ -24,11 +28,20 @@
   & > *:last-of-type {
     margin-left: 0.8rem;
   }
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
 }
 
 .heading {
   color: $color-purple;
   margin-top: 4rem;
+
+  @include respond(phone) {
+    margin-top: 2.4rem;
+  }
 }
 
 .content {
@@ -43,6 +56,10 @@
     align-items: center;
     max-width: 85.6rem;
     padding: 0 3.2rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 2.4rem;
   }
 }
 
@@ -64,13 +81,19 @@
     height: 48rem;
     margin-bottom: 4.4rem;
   }
+
+  @include respond(phone) {
+    font-size: 10rem;
+    height: 27rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 1.2rem;
+  // padding-bottom: 1.2rem;
 }
 
 .text {
@@ -85,6 +108,12 @@
     width: 100%;
     max-width: unset;
     margin-bottom: 4.4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -117,6 +146,11 @@
   &:hover {
     background: $color-purple;
     color: $color-white;
+  }
+
+  @include respond(phone) {
+    padding: 1.2rem 0;
+    font-size: 2rem;
   }
 }
 

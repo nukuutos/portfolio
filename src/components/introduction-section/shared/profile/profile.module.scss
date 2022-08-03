@@ -34,6 +34,11 @@
     width: 22rem;
     height: 21.5rem;
   }
+
+  @include respond(phone) {
+    width: 15.4rem;
+    height: 15.1rem;
+  }
 }
 
 .emoji {
@@ -47,6 +52,10 @@
 
   @include respond(tab-land) {
     font-size: 10rem;
+  }
+
+  @include respond(phone) {
+    font-size: 8rem;
   }
 }
 
