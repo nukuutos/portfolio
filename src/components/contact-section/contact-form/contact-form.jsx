@@ -1,11 +1,12 @@
 import { Form, Formik } from 'formik';
 import styles from './contact-form.module.scss';
 import Input from './input/input';
+import schema from './schema';
 import Textarea from './textarea/textarea';
 
 const ContactForm = () => (
   <Formik
-    //  validationSchema={{}}
+    validationSchema={schema}
     initialValues={{ name: '', company: '', email: '', message: '' }}
     onSubmit={null}
   >
