@@ -1,6 +1,6 @@
-import React from 'react';
 import Chevron from './chevron/chevron';
 import Piece from '../shared/piece/piece';
+import Logo from './logo/logo';
 
 import styles from './recent-project-section.module.scss';
 
@@ -13,9 +13,7 @@ const RecentProjectSection = () => (
     <h2 className={styles.heading}>Beaurel</h2>
 
     <div className={styles.content}>
-      <div className={styles.logo}>
-        <span>Beau</span>
-      </div>
+      <Logo />
 
       <div className={styles.description}>
         <p className={styles.text}>

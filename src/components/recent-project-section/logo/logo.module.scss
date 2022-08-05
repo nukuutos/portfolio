@@ -1,0 +1,147 @@
+@use '@styles/colors' as *;
+@use '@styles/mixins' as *;
+
+.logo {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 60.3rem;
+  height: 59.7rem;
+  background: $color-purple;
+  border-radius: 2rem;
+
+  color: $color-white;
+  font-size: 20rem;
+
+  @include respond(tab-land) {
+    width: 100%;
+    height: 48rem;
+    margin-bottom: 4.4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 10rem;
+    height: 27rem;
+    margin-bottom: 2.4rem;
+  }
+
+  // black background
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color-black, 0.6);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.2s opacity;
+  }
+
+  &:hover {
+    $go-to-duration: 0.2s;
+    $go-to-delay: 0s;
+    $wrapper-delay: $go-to-duration + $go-to-delay + 0.2s;
+    $wrapper-duration: $go-to-duration + $go-to-delay + 0.2s;
+    $border-delay: $wrapper-delay;
+    $border-duration: 0.2s;
+
+    .beau {
+      animation: 0.2s beauAppearance both;
+
+      &::after {
+        animation: $border-duration borderAppearance $border-delay both;
+      }
+    }
+
+    .go-to {
+      animation: $go-to-duration goToAppearance $go-to-delay both;
+    }
+
+    .wrapper {
+      animation: 0.2s scaleDownWrapper $wrapper-delay both;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.go-to {
+  position: absolute;
+  top: 9.4rem;
+  transform: translateX(-120%);
+  transition: 0.2s transform;
+  color: $color-gold;
+}
+
+.beau {
+  position: relative;
+  transition: 0.2s transform;
+
+  // border
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -2rem;
+    height: 2rem;
+    background: $color-red;
+    opacity: 0;
+  }
+}
+
+@keyframes borderAppearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes beauAppearance {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(9.6rem);
+  }
+}
+
+@keyframes goToAppearance {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleDownWrapper {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
