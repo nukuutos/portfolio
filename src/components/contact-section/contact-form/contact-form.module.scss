@@ -19,13 +19,13 @@
 
 .button {
   padding: 1.2rem 0;
-  border: 2px solid rgba($color-gold, 0.9);
+  border: 2px solid $color-gold;
   color: $color-gold;
   font-size: 2rem;
   transition: 0.2s background, 0.2s color;
 
   &:hover {
-    background: rgba($color-gold, 0.9);
-    color: $color-white;
+    background: $color-gold;
+    color: $color-purple-gray;
   }
 }
