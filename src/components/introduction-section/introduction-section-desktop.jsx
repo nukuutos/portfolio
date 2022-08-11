@@ -11,8 +11,9 @@ const IntroductionSectionDesktop = () => (
       <h1 className={styles.header}>MERN Stack Developer</h1>
 
       <p className={styles.about}>
-        I’m full stack developer for 4 years. Currently searching for Software Developer Job. One
-        semester away from graduating as a computer security specialist. Like to play CTFs.
+        Looking for job positions of Full Stack Developer, Software Engineer. Interested in
+        contributing to your projects. One semester away from graduating as computer security
+        specialist. Like to play CTFs.
       </p>
 
       <Curve className={styles.curve} />
