@@ -12,7 +12,7 @@ const Portfolio = () => {
     <>
       <main className={styles.main}>
         <IntroductionSection isDesktop={isDesktop} />
-        <RecentProjectSection />
+        <RecentProjectSection isDesktop={isDesktop} isPhone={isPhone} />
         <ContactSection isPhone={isPhone} />
       </main>
       <Footer isPhone={isPhone} />

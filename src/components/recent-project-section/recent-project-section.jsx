@@ -4,8 +4,7 @@ import Logo from './logo/logo';
 
 import styles from './recent-project-section.module.scss';
 
-const RecentProjectSection = () => (
-  <section className={styles.section}>
+const RecentProjectSection = ({ isPhone, isDesktop }) => {
     <span className={styles.recent}>
       recent project <Chevron />
     </span>
