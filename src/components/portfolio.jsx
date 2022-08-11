@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import ContactSection from './contact-section/contact-section';
 import Footer from './footer/footer';
 import useScreenSize from './hooks/use-screen-size';
@@ -10,6 +11,13 @@ const Portfolio = () => {
 
   return (
     <>
+      <Head>
+        <title>Nikita Voloshin</title>
+        <meta
+          name="description"
+          content="Nikita Voloshin is MERN Stack Developer. Interested in contributing to your projects. Looking for job positions of Full Stack Developer, Software Engineer."
+        />
+      </Head>
       <main className={styles.main}>
         <IntroductionSection isDesktop={isDesktop} />
         <RecentProjectSection isDesktop={isDesktop} isPhone={isPhone} />
