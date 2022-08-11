@@ -31,7 +31,6 @@
     margin-bottom: 2.4rem;
   }
 
-  // black background
   &:after {
     content: '';
     position: absolute;
@@ -71,6 +70,19 @@
 
     &::after {
       opacity: 1;
+    }
+
+    @include respond(tab-land) {
+      .beau,
+      .beau::after,
+      .go-to,
+      .wrapper {
+        animation: none;
+      }
+
+      &::after {
+        opacity: 0;
+      }
     }
   }
 }

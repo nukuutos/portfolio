@@ -12,7 +12,7 @@ const RecentProjectSection = ({ isPhone, isDesktop }) => {
     <h2 className={styles.heading}>Beaurel</h2>
 
     <div className={styles.content}>
-      <Logo />
+        <Logo isDesktop={isDesktop} />
 
       <div className={styles.description}>
         <p className={styles.text}>
