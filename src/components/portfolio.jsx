@@ -9,12 +9,14 @@ const Portfolio = () => {
   const { isDesktop, isPhone } = useScreenSize();
 
   return (
-    <main className={styles.main}>
-      <IntroductionSection isDesktop={isDesktop} />
-      <RecentProjectSection />
-      <ContactSection isPhone={isPhone} />
+    <>
+      <main className={styles.main}>
+        <IntroductionSection isDesktop={isDesktop} />
+        <RecentProjectSection />
+        <ContactSection isPhone={isPhone} />
+      </main>
       <Footer isPhone={isPhone} />
-    </main>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import LinkedIn from '../shared/linkedIn/linkedIn';
 import styles from './footer.module.scss';
 
 const Footer = ({ isPhone }) => (
-  <div className={styles.footer}>
+  <footer className={styles.footer}>
     {isPhone && (
       <>
         <span className={styles.email}>dev.nukuutos@gmail.com</span>
@@ -13,7 +13,7 @@ const Footer = ({ isPhone }) => (
         </div>
       </>
     )}
-  </div>
+  </footer>
 );
 
 export default Footer;
