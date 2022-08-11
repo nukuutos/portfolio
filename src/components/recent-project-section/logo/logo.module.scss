@@ -45,15 +45,19 @@
   }
 
   &:hover {
+    $beau-duration: 0.2s;
+
     $go-to-duration: 0.2s;
     $go-to-delay: 0s;
+
     $wrapper-delay: $go-to-duration + $go-to-delay + 0.2s;
-    $wrapper-duration: $go-to-duration + $go-to-delay + 0.2s;
+    $wrapper-duration: 0.2s;
+
     $border-delay: $wrapper-delay;
     $border-duration: 0.2s;
 
     .beau {
-      animation: 0.2s beauAppearance both;
+      animation: $beau-duration beauAppearance both;
 
       &::after {
         animation: $border-duration borderAppearance $border-delay both;
@@ -65,7 +69,7 @@
     }
 
     .wrapper {
-      animation: 0.2s scaleDownWrapper $wrapper-delay both;
+      animation: $wrapper-duration scaleDownWrapper $wrapper-delay both;
     }
 
     &::after {
