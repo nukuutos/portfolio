@@ -30,7 +30,7 @@ const RecentProjectSection = ({ isPhone, isDesktop }) => {
             book an appointments and review masters.{' '}
             <a
               className={styles.beaurel}
-              href="http://beaurel.com"
+              href="http://github.com/nukuutos/beaurel-demo"
               target="_blank"
               rel="noopener noreferrer"
             >
