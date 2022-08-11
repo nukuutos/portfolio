@@ -101,9 +101,17 @@
   text-indent: 0;
   padding-left: 8rem;
 
-  // text-indent: 5.6rem;
   & > * {
     list-style: square;
   }
 }
-// .heading
+
+.link {
+  border-bottom: 2px solid $color-purple;
+  transition: 0.2s color, 0.2s background-color;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-purple;
+  }
+}

@@ -26,9 +26,27 @@ const Project = ({ isPhone, closeModal }) => {
       <section className={styles.section}>
         <h3 className={styles.heading}>Current state</h3>
         <p className={styles.text}>
-          For demo purposes you can run this project by using docker. You can’t sign up but you can
-          use fake accounts. Fake accounts you can find on my github. I want to run it as commercial
-          someday but now I don&apos;t have a possibility to do this (money).
+          For demo purposes, you can run this{' '}
+          <a
+            className={styles.link}
+            href="http://github.com/nukuutos/beaurel-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            project
+          </a>{' '}
+          by using docker. You can’t sign up but you can use fake accounts. Fake accounts you can
+          find in the same{' '}
+          <a
+            className={styles.link}
+            href="http://github.com/nukuutos/beaurel-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            repo
+          </a>{' '}
+          where&apos;s docker-compose file. I want to run it as a commercial someday but now I
+          don&apos;t have the possibility to do this (money).
         </p>
       </section>
       <section className={styles.section}>
