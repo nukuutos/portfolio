@@ -21,10 +21,10 @@
 
 .link {
   display: inline-block;
-  color: #c4c4c4;
+  color: $color-gray-dark;
   font-size: 2rem;
   padding-bottom: 0.2rem;
-  border-bottom: 2px solid #c4c4c4;
+  border-bottom: 2px solid $color-gray-dark;
   transition: 0.2s color, 0.2s border-color;
 
   &:hover {

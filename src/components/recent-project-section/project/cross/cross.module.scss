@@ -1,12 +1,14 @@
+@use '@styles/colors' as *;
+
 .cross {
   width: 3.2rem;
   height: 3.2rem;
-  fill: #e6e6e6;
+  fill: $color-gray;
   cursor: pointer;
   transition: 0.2s transform, 0.2s fill;
 
   &:hover {
     transform: scale(1.2);
-    fill: #dadada;
+    fill: $color-gray-dark;
   }
 }

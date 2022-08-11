@@ -8,7 +8,7 @@
   transition: 0.2s fill, 0.2s transform;
 
   &:hover {
-    fill: $color-github;
+    fill: $color-github-light;
     transform: scale(1.2);
   }
 
@@ -16,7 +16,7 @@
     height: 3.2rem;
 
     &:hover {
-      fill: #333;
+      fill: $color-github-dark;
       transform: scale(1.2);
     }
   }
