@@ -1,0 +1,109 @@
+@use '@styles/colors' as *;
+@use '@styles/mixins' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background: $color-white;
+  z-index: 3;
+
+  padding: 8rem 2.8rem;
+
+  @include respond(tab-port) {
+    padding-top: 10.8rem;
+  }
+}
+
+.cross {
+  position: absolute;
+  top: 3.6rem;
+  right: 4rem;
+}
+
+.header {
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 6rem;
+
+  @include respond(phone) {
+    margin-bottom: 4rem;
+  }
+}
+
+.svg {
+  margin-bottom: 6rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.beaurel {
+  position: relative;
+  color: $color-purple;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.repos {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0.4rem, 50%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c4c4c4;
+}
+
+.section {
+  margin-bottom: 4.4rem;
+}
+
+.heading,
+.text,
+.statistic-list {
+  color: $color-black;
+}
+
+.heading {
+  font-size: 4rem;
+  margin-bottom: 3.2rem;
+}
+
+.text,
+.statistic-list {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  max-width: 70rem;
+  text-align: left;
+  margin: 0 auto;
+  text-indent: 2.8rem;
+}
+
+.statistic-list {
+  text-indent: 0;
+  padding-left: 8rem;
+
+  // text-indent: 5.6rem;
+  & > * {
+    list-style: square;
+  }
+}
+// .heading

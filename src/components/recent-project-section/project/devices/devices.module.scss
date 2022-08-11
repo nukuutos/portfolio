@@ -1,0 +1,16 @@
+@use '@styles/mixins' as *;
+
+.devices {
+  width: 56.8rem;
+  height: 32.3rem;
+
+  @include respond(tab-port) {
+    width: 48rem;
+    height: 27.2rem;
+  }
+
+  @include respond(phone) {
+    width: 29.2rem;
+    height: 16.5rem;
+  }
+}

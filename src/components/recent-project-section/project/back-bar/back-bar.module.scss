@@ -1,0 +1,23 @@
+@use '@styles/colors' as *;
+@use '@styles/mixins' as *;
+
+.back-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  padding: 2rem 0 2rem 2.8rem;
+  display: flex;
+  align-items: center;
+  background: $color-white;
+  box-shadow: 0 0 0.5rem rgba($color-black, 0.2);
+}
+
+.heading {
+  font-size: 2.8rem;
+  color: $color-purple-dark;
+  margin-left: 3.6rem;
+  font-weight: 700;
+}
