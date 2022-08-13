@@ -10,7 +10,6 @@ const ContactSection = ({ isPhone }) => (
   <section className={styles.section}>
     <h2 className={styles.heading}>Contact</h2>
     <div className={styles['form-window']}>
-      <h3 className={styles['form-heading']}>Interested in my skills?</h3>
       <ContactForm />
       {!isPhone && (
         <div className={styles.footer}>

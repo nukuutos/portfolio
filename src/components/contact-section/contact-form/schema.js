@@ -16,11 +16,11 @@ const message = Yup.string().trim().required('Required!').min(5, 'Minimum length
 
 const email = Yup.string().required('Required!').email();
 
-const schema = Yup.object().shape({
+export const schema = Yup.object().shape({
   name,
   email,
   company,
   message,
 });
 
-export default schema;
+export const initialValues = { name: '', company: '', email: '', message: '' };
