@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./cypress/**/*", "./node_modules/cypress"],
   "compilerOptions": {
     "module": "ES6",
     "target": "es2021",
