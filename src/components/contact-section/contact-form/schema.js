@@ -10,8 +10,7 @@ const name = Yup.string()
 const company = Yup.string()
   .trim()
   .min(2, 'Minimum length is 2 symbols!')
-  .max(40, 'Maximum length is 40 symbols!')
-  .matches(/^[а-яё a-z]+$/gi, 'Only latin and cyrillic symbols!');
+  .max(40, 'Maximum length is 40 symbols!');
 
 const message = Yup.string().trim().required('Required!').min(5, 'Minimum length is 5 symbols!');
 
