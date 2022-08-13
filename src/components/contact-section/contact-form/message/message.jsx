@@ -1,7 +1,7 @@
 import styles from './message.module.scss';
 
 const Message = ({ isSuccess }) => (
-  <div className={styles.message}>
+  <div data-test="form-result" className={styles.message}>
     {isSuccess && (
       <>
         <p className={styles.text}>

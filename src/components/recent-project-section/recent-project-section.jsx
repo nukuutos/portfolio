@@ -40,7 +40,7 @@ const RecentProjectSection = ({ isPhone, isDesktop }) => {
             takes two years of work to move this project from design to production. Unfortunately it
             can&apos;t be used in commercial.
           </p>
-          <button onClick={openProject} className={styles.button} type="button">
+          <button data-test="open-beaurel-project" onClick={openProject} className={styles.button} type="button">
             More on this project
           </button>
         </div>

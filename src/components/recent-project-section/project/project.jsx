@@ -9,7 +9,7 @@ const Project = ({ isPhone, closeModal }) => {
   useBodyDisableScroll();
 
   return (
-    <div className={styles.modal}>
+    <div data-test="beaurel-project" className={styles.modal}>
       {isPhone && <BackBar closeModal={closeModal} />}
       {!isPhone && <Cross onClick={closeModal} className={styles.cross} />}
 
