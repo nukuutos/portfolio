@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache-dependency-path: main/package-lock.json
           cache: 'npm'
 
         # Checkout client
