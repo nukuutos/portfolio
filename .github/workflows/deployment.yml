@@ -23,25 +23,19 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: main
 
-      - name: Get files of current directory
-        run: ls
-
-      - name: Go to main
-        run: cd main
-
-      - name: Get files of current directory
-        run: ls
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
+        working-directory: ./main
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Install dependencies
+        working-directory: ./main
         run: npm ci
 
       - name: Start API
+        working-directory: ./main
         run: npm start
         env:
           PORT: 5000
