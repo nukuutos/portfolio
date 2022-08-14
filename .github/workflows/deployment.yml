@@ -19,7 +19,7 @@ jobs:
       - name: Checkout api
         uses: actions/checkout@v3
         with:
-          repository: portfolio-api
+          repository: nukuutos/portfolio-api
           token: ${{ secrets.GH_PAT }}
           path: main
 
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout client
         uses: actions/checkout@v3
         with:
-          repository: portfolio
+          repository: nukuutos/portfolio
           token: ${{ secrets.GH_PAT }}
           path: main
 
