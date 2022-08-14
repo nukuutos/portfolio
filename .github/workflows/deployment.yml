@@ -23,6 +23,9 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: main
 
+      - name: Get files of current directory
+        run: ls
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
