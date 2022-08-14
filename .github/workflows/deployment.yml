@@ -26,11 +26,13 @@ jobs:
       - name: Get files of current directory
         run: ls
 
+      - name: Go to main
+        run: cd main
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache-dependency-path: main/package-lock.json
           cache: 'npm'
 
       - name: Install dependencies
