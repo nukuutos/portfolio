@@ -50,6 +50,9 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: main
 
+      - name: Get files of current directory
+        run: ls
+
       - name: Install dependencies
         run: npm ci
 
