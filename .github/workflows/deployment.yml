@@ -68,10 +68,17 @@ jobs:
         working-directory: ./client
         run: npm run cypress:run
 
+      - name: Rebuild client with production environment variables
+        working-directory: ./client
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /portfolio
+          NEXT_PUBLIC_SERVER_URL: https://bba369svpmm6ncl22bj6.containers.yandexcloud.net
+
       - name: Create .nojekyll file
-        run: touch ./out/.nojekyll
+        run: touch ./client/out/.nojekyll
 
       - name: Deploy application🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out # The folder the action should deploy.
+          folder: ./client/out # The folder the action should deploy.
