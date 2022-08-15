@@ -36,7 +36,7 @@ jobs:
 
       - name: Start API
         working-directory: ./api
-        run: npm start
+        run: npm start &
         env:
           PORT: 5000
           NODE_ENV: test
