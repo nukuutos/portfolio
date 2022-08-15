@@ -82,6 +82,7 @@ jobs:
         run: touch ./client/out/.nojekyll
 
       - name: Deploy application🚀
+        working-directory: ./client
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./client/out # The folder the action should deploy.
+          folder: out # The folder the action should deploy.
