@@ -49,8 +49,8 @@ jobs:
       - name: Checkout client
         uses: actions/checkout@v3
         with:
-          repository: nukuutos/portfolio
-          token: ${{ secrets.GH_PAT }}
+          # repository: nukuutos/portfolio
+          # token: ${{ secrets.GH_PAT }}
           path: client
 
       - name: Install client dependencies
