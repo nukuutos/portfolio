@@ -85,4 +85,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./client/out # The folder the action should deploy.
-          workspace: ./client
+          token: ${{ secrets.GH_PAT }}
