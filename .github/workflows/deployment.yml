@@ -84,5 +84,4 @@ jobs:
       - name: Deploy application🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          working-directory: ./client
-          folder: ./out # The folder the action should deploy.
+          folder: ./client/out # The folder the action should deploy.
