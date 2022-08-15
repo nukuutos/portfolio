@@ -82,7 +82,7 @@ jobs:
         run: touch ./client/out/.nojekyll
 
       - name: Configure git
-        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE/client"
 
       - name: Deploy application🚀
         uses: JamesIves/github-pages-deploy-action@v4
