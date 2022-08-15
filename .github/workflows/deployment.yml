@@ -48,45 +48,32 @@ jobs:
         # Checkout client
       - name: Checkout client
         uses: actions/checkout@v3
-        with:
-          # repository: nukuutos/portfolio
-          # token: ${{ secrets.GH_PAT }}
-          path: client
 
       - name: Install client dependencies
-        working-directory: ./client
         run: npm ci
 
       - name: Build client
-        working-directory: ./client
         run: npm run build
         env:
           NEXT_PUBLIC_SERVER_URL: http://localhost:5000
 
       - name: Start client
-        working-directory: ./client
         run: npm start &
 
       - name: Run cypress
-        working-directory: ./client
         run: npm run cypress:run
 
       - name: Rebuild client with production environment variables
-        working-directory: ./client
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /portfolio
           NEXT_PUBLIC_SERVER_URL: https://bba369svpmm6ncl22bj6.containers.yandexcloud.net
 
       - name: Create .nojekyll file
-        run: touch ./client/out/.nojekyll
-
-      - name: Configure git
-        working-directory: ./client
-        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        run: touch ./out/.nojekyll
 
       - name: Deploy application🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./client/out # The folder the action should deploy.
+          folder: out
           token: ${{ secrets.GH_PAT }}
