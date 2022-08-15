@@ -30,11 +30,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install api dependencies
         working-directory: ./api
         run: npm ci
 
-      - name: Start API
+      - name: Start api
         working-directory: ./api
         run: npm start &
         env:
@@ -47,19 +47,21 @@ jobs:
         with:
           repository: nukuutos/portfolio
           token: ${{ secrets.GH_PAT }}
-          path: main
+          path: client
 
-      - name: Get files of current directory
-        run: ls
-
-      - name: Install dependencies
+      - name: Install client dependencies
+        working-directory: ./client
         run: npm ci
 
-      - name: Build application
+      - name: Build client
+        working-directory: ./client
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /portfolio
-          NEXT_PUBLIC_SERVER_URL: https://bba369svpmm6ncl22bj6.containers.yandexcloud.net
+          NEXT_PUBLIC_SERVER_URL: http://localhost:5000
+
+      - name: Start client
+        working-directory: ./client
+        run: npm start &
 
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
