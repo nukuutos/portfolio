@@ -69,7 +69,7 @@ jobs:
         working-directory: ./client
         run: npm run cypress:run
 
-  build & deploy:
+  build and deploy:
     needs: test
     runs-on: ubuntu-latest
 
