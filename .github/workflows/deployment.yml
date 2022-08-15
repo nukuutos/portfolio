@@ -81,9 +81,11 @@ jobs:
       - name: Create .nojekyll file
         run: touch ./client/out/.nojekyll
 
+      - name: Configure git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Deploy application🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./client/out # The folder the action should deploy.
           token: ${{ secrets.GH_PAT }}
-          workspace: /home/runner/work/portfolio/portfolio/client
