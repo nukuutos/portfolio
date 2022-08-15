@@ -81,6 +81,10 @@
   bottom: 0;
   right: 0;
   transform: translate(calc(100% + 25rem), 40%) rotate(-127deg);
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .piece {
@@ -88,6 +92,10 @@
   right: 0;
   transform: translate(170%, 20%) rotate(68deg);
   z-index: -1;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .rhombs {
