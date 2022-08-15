@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI/CD
 
 on:
   push:
@@ -10,12 +10,12 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [14.x]
 
     steps:
       # Checkout api
@@ -48,22 +48,39 @@ jobs:
         # Checkout client
       - name: Checkout client
         uses: actions/checkout@v3
+        with:
+          path: client
 
       - name: Install client dependencies
+        working-directory: ./client
         run: npm ci
 
-      - name: Build client
+      - name: Build client with test environment variables
+        working-directory: ./client
         run: npm run build
         env:
           NEXT_PUBLIC_SERVER_URL: http://localhost:5000
 
       - name: Start client
+        working-directory: ./client
         run: npm start &
 
       - name: Run cypress
+        working-directory: ./client
         run: npm run cypress:run
 
-      - name: Rebuild client with production environment variables
+  build & deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+      - name: Checkout client
+        uses: actions/checkout@v3
+
+      - name: Build client with production environment variables
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /portfolio
@@ -76,4 +93,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
-          token: ${{ secrets.GH_PAT }}
