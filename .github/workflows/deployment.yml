@@ -86,3 +86,4 @@ jobs:
         with:
           folder: ./client/out # The folder the action should deploy.
           token: ${{ secrets.GH_PAT }}
+          workspace: /home/runner/work/portfolio/portfolio/client
