@@ -63,6 +63,10 @@ jobs:
         working-directory: ./client
         run: npm start &
 
+      - name: Run cypress
+        working-directory: ./client
+        run: npm run cypress:run
+
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
 
