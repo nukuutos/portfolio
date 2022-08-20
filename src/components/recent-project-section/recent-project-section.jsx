@@ -25,9 +25,9 @@ const RecentProjectSection = ({ isPhone, isDesktop }) => {
 
         <div className={styles.description}>
           <p className={styles.text}>
-            It is a platform for beauty-masters and their customers. For beauty-masters it allows to
-            create a flexible timetable and services, show to customer their works. Customers can
-            book an appointments and review masters.{' '}
+            It is a platform for beauty-masters and their customers, with allows for masters to
+            create a flexible schedule and services, show their works. Customers can book
+            appointments and review masters.{' '}
             <a
               className={styles.beaurel}
               href="http://github.com/nukuutos/beaurel-demo"
@@ -37,10 +37,14 @@ const RecentProjectSection = ({ isPhone, isDesktop }) => {
               Beaurel
             </a>{' '}
             has some elements of social network like messenger, favorite masters (friends), etc. It
-            takes two years of work to move this project from design to production. Unfortunately it
-            can&apos;t be used in commercial.
+            takes two years of work to move this project from design to production.
           </p>
-          <button data-test="open-beaurel-project" onClick={openProject} className={styles.button} type="button">
+          <button
+            data-test="open-beaurel-project"
+            onClick={openProject}
+            className={styles.button}
+            type="button"
+          >
             More on this project
           </button>
         </div>

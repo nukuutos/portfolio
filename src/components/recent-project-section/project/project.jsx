@@ -26,7 +26,8 @@ const Project = ({ isPhone, closeModal }) => {
       <section className={styles.section}>
         <h3 className={styles.heading}>Current state</h3>
         <p className={styles.text}>
-          For demo purposes, you can run this{' '}
+          Currently I&apos;m working and maintaining this project. For demo purposes, you can run
+          this{' '}
           <a
             className={styles.link}
             href="http://github.com/nukuutos/beaurel-demo"
@@ -45,8 +46,7 @@ const Project = ({ isPhone, closeModal }) => {
           >
             repo
           </a>{' '}
-          where&apos;s docker-compose file. I want to run it as a commercial someday but now I
-          don&apos;t have the possibility to do this (money).
+          where&apos;s docker-compose file.
         </p>
       </section>
       <section className={styles.section}>
@@ -57,22 +57,46 @@ const Project = ({ isPhone, closeModal }) => {
           technology I will point out it.
         </p>
         <p className={styles.text}>
-          Frontend main technologies and tools: Figma, HTML5, CSS, SCSS, JavaScript, React, Next.js,
-          Redux
+          Frontend main technologies and tools: Figma, HTML5, CSS3, SCSS, JavaScript, React,
+          Next.js, Redux.
         </p>
         <p className={styles.text}>
-          Backend main technologies and tools: Node.js, Express, MongoDB, Redis, Socket.io, Postman
+          Backend main technologies and tools: Node.js, Express, MongoDB, Redis, Socket.io, Postman.
         </p>
-        <p className={styles.text}>Test tools: Jest, Cypress</p>
-        <p className={styles.text}>Deploy tools: Docker</p>
+        <p className={styles.text}>Test tools: Jest, Cypress.</p>
+        <p className={styles.text}>Deploy tools: Docker, Github Actions.</p>
       </section>
       <section className={styles.section}>
         <h3 className={styles.heading}>Code statistics</h3>
         <p className={styles.text}>
-          Lines of JavaScript code on API without data for database or data for providing tests on
-          commit 254a868 is 20422.
+          To show the size of this project, I want to note the statistics of the number of lines of
+          code.
         </p>
-        <p className={styles.text}>Lines number of src client folder on commit ece0713 is 28134:</p>
+        <p className={styles.text}>
+          Lines of JavaScript code on API without data for database or data for providing tests on
+          commit{' '}
+          <a
+            className={styles.link}
+            href="https://github.com/nukuutos/beaurel-api/tree/254a868af75cd0a38236e4339f43345d4076ee0c"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            254a868
+          </a>{' '}
+          is 20422.
+        </p>
+        <p className={styles.text}>
+          Lines number of src client folder on commit{' '}
+          <a
+            className={styles.link}
+            href="https://github.com/nukuutos/beaurel-client/tree/ece0713cbaba69ea24e9247908f42e2ec7d2b102"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ece0713
+          </a>{' '}
+          is 28134:
+        </p>
         <ul className={styles['statistic-list']}>
           <li>10620 .jsx</li>
           <li>9774 .js</li>
