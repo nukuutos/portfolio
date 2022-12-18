@@ -15,7 +15,7 @@ const Portfolio = () => {
         <title>Nikita Voloshin</title>
         <meta
           name="description"
-          content="Nikita Voloshin is MERN Stack Developer. Interested in contributing to your projects. Looking for job positions of Full Stack Developer, Software Engineer."
+          content="Nikita Voloshin is Full Stack Developer. Interested in contributing to your projects. Looking for job positions of Frontend Developer."
         />
       </Head>
       <main className={styles.main}>
